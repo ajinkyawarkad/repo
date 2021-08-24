@@ -1,97 +1,29 @@
 <template>
   <div id="app">
-    <div class="conatainer">
-      <div class="row">
-        <div class="col-md-3">
-          <nav-list :blogs="blogs" @sendId="incLike($event)" @sendData="getData($event)"></nav-list>
-        </div>
+    <nav-bar></nav-bar><br>
 
-        <div class="col-md-9">
-          <blog-details :toShow="toShow"></blog-details>
+   <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <router-view></router-view>
+            </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
-
 <script>
-import NavList from "./components/NavList.vue";
+import NavBar from './components/NavBar.vue'
 
-import BlogDetails from "./components/BlogDetails.vue";
 
 export default {
-  name: "App",
+  name: 'app',
   components: {
-    NavList,
-    BlogDetails,
-  },
-  data() {
-    return {
-      blogs: [
-        {
-          id: 1213,
-          tittle: "First Blog",
-          body: "ahfkjd asjkdfjhaslkf kjahflaskd kjsdadhfldskajf jdhfldsk kjsdjfdnlasdf jkjfnsdlaf kadjsfnl ",
-          author: "Ajinkya Warkad",
-          likes: 0,
-          dislikes: 0,
-        },
-        {
-          id: 2432,
-          tittle: "Second Blog",
-          body: "ahfkjd asjkdfjhaslkf kjahflaskd kjsdadhfldskajf jdhfldsk kjsdjfdnlasdf jkjfnsdlaf kadjsfnl adsfasf fadfadf adf adf s dff ",
-          author: "Santosh Patil",
-          likes: 0,
-          dislikes: 0,
-        },
-        {
-          id: 324,
-          tittle: "Third Blog",
-          body: "ahfkjd asjkdfjhaslkf kjahflaskd kjsdadhfldskajf jdhfldsk kjsdjfdnlasdf jkjfnsdlaf kadjsfnl gfdgfgs dfgsf dsfgs dfsg gsdfgs fdgsgs gdf ",
-          author: "Subodh Shendre",
-          likes: 0,
-          dislikes: 0,
-        },
-        {
-          id: 234,
-          tittle: "New Blog",
-          body: "ahfkjd asjkdfjhaslkf kjahflaskd kjsdadhfldskajf jdhfldsk kjsdjfdnlasdf  gs fdsg fg sfgsf g fsgdsfgsg dsfgjkjfnsdlaf kadjsfnl ",
-          author: "Pratik Mane",
-          likes: 0,
-          dislikes: 0,
-        },
-        {
-          id: 4353,
-          tittle: "Fifth Blog",
-          body: "ahfkjd asjkdfjhaslkf  g dfsg sdfgsfg fsd  gfg sg dfgdsfg  kjahflaskd kjsdadhfldskajf jdhfldsk kjsdjfdnlasdf jkjfnsdlaf kadjsfnl ",
-          author: "Prashant Gholap",
-          likes: 0,
-          dislikes: 0,
-        },
-      ],
-
-      toShow: {},
-    };
-  },
-  methods: {
-    getData(blog) {
-      console.log("id from appVue", blog.id);
-      this.toShow = blog
-     
-    },
-    incLike(id){
-      console.log("Got id",id)
-      // for(var i in this.blogs){
-      //   if(this.blogs[i].id == id){
-      //     this.blogs[i].likes++
-      //   }
-      // }
-
-    }
-  },
-};
+    NavBar
+   
+  }
+}
 </script>
-    BlogDetails
+
 
 <style>
 #app {
@@ -100,6 +32,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
