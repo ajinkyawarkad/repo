@@ -3,13 +3,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
+          <h1>Sign Up</h1>
           <form>
             <div class="form-group">
                <label for="exampleInputEmail1">Name</label>
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="exampleInputEsmail1"
                 aria-describedby="emailHelp"
                 placeholder="Enter Name"
               />
@@ -19,7 +20,7 @@
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="exampleInputEmssail1"
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
@@ -29,7 +30,7 @@
               <input
                 type="number"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="exampleInputEmails1"
                 aria-describedby="emailHelp"
                 placeholder="Enter Phone"
               />
@@ -40,7 +41,7 @@
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="exampleInputPasswordd1"
                 placeholder="Password"
               />
             </div>
@@ -58,7 +59,7 @@
 export default {
   methods:{
     signUp(){
-      
+
     }
 
   }

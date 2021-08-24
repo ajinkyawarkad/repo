@@ -8,7 +8,8 @@
       <div class="col-md-9">
         <blog-details @sendId="incLike($event)" :toShow="toShow"></blog-details>
       </div>
-    </div>
+    </div><hr>
+    
   </div>
 </template>
 
@@ -68,7 +69,7 @@ export default {
           dislikes: 0,
         },
       ],
-      
+
       toShow: {},
 
       }
@@ -95,3 +96,5 @@ export default {
 
 };
 </script>
+
+

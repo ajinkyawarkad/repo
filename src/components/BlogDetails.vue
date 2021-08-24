@@ -24,9 +24,12 @@
         </footer>
       </blockquote>
     </div>
+    <button class="btn-btn-primary" @click="toDetails(toShow)">Next</button>
   </div>
+  
 </template>
 <script>
+
 export default {
   name: "BlogDetails",
   props: {
@@ -36,6 +39,10 @@ export default {
     show() {
       console.log(this.toShow);
     },
+    toDetails(data){
+      this.$router.push({name:'Details',params:data})
+      
+    }
   
   },
 };
