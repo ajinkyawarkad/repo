@@ -23,8 +23,8 @@
           </div>
         </footer>
       </blockquote>
-    </div>
-    <button class="btn-btn-primary" @click="toDetails(toShow)">Next</button>
+    </div><hr>
+    <button class="btn btn-warning" @click="toDetails(toShow)">Next</button>
   </div>
   
 </template>
