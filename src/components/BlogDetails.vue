@@ -13,7 +13,7 @@
           <div class="conatainer">
             <div class="row">
               <div class="col-md-4">
-                <button class="btn btn-primary" @click="$emit('sendId',toShow.id)">Like</button>
+                <button class="btn btn-outline-danger" @click="$emit('sendId',toShow.id)">Like</button>
               </div>
               <div class="col-md-4">
                    <cite title="Source Title"> {{ toShow.likes }}</cite>

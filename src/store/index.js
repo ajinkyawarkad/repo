@@ -50,7 +50,7 @@ export default new Vuex.Store({
     ],
   },
   getters: {
-    getTotal(state){
+    getTotal(state) {
       return state.blogs.length
 
     }
@@ -69,9 +69,6 @@ export default new Vuex.Store({
       state.blogs.push(data)
 
     }
-
-
-
   },
   actions: {
 
