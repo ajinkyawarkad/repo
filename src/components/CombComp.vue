@@ -1,5 +1,12 @@
 <template>
   <div class="conatainer">
+    <div>
+      <div class="row">
+        <div class="col-md-3">
+          <h4>Total Blogs: {{total}}</h4> 
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-3">
         <!-- <nav-list :blogs="blogs" @sendData="getData($event)"></nav-list> -->
@@ -12,7 +19,7 @@
         <blog-details @sendId="incLike($event)" :toShow="toShow"></blog-details>
       </div>
     </div>
-    <hr />
+
   </div>
 </template>
 
@@ -36,6 +43,7 @@ export default {
       blogs: [],
 
       toShow: {},
+      total:this.$store.getters.getTotal
     };
   },
 

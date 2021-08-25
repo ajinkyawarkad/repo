@@ -50,6 +50,10 @@ export default new Vuex.Store({
     ],
   },
   getters: {
+    getTotal(state){
+      return state.blogs.length
+
+    }
 
   },
   mutations: {
@@ -61,7 +65,7 @@ export default new Vuex.Store({
       }
 
     },
-    insertBlog(state , data){
+    insertBlog(state, data) {
       state.blogs.push(data)
 
     }
